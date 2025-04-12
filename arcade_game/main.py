@@ -4,18 +4,20 @@ from paddle import Paddle
 from ball import Ball
 from scoreboard import Scoreboard
 import time
-
+# Creating background using screen library
 screen = Screen()
 screen.bgcolor("black")
 screen.setup(width=800, height=600)
 screen.title("Pong")
 screen.tracer(0)
 
+# Assiging positions to the paddles
 r_paddle = Paddle((350, 0))
 l_paddle = Paddle((-350, 0))
 ball = Ball()
 scoreboard = Scoreboard()
 
+# Keys for paddle moments
 screen.listen()
 screen.onkey(r_paddle.go_up, "Up")
 screen.onkey(r_paddle.go_down, "Down")
