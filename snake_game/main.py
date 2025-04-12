@@ -1,9 +1,11 @@
+# Importing libraries 
 from turtle import Screen
 import time
 from snake import Snake
 from food import Food
 from scoreboard import Scoreboard
 
+# Creating Background 
 screen = Screen()
 screen.setup(width=600, height=600)
 screen.bgcolor("black")
@@ -14,6 +16,7 @@ snake = Snake()
 food = Food()
 scoreboard = Scoreboard()
 
+# Assigning keys for the movement of snake
 screen.listen()
 screen.onkey(snake.up, "Up")
 screen.onkey(snake.down, "Down")
