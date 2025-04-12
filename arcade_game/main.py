@@ -17,7 +17,7 @@ l_paddle = Paddle((-350, 0))
 ball = Ball()
 scoreboard = Scoreboard()
 
-# Keys for paddle moments
+# Keys for paddle movements
 screen.listen()
 screen.onkey(r_paddle.go_up, "Up")
 screen.onkey(r_paddle.go_down, "Down")
