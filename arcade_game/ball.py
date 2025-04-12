@@ -3,6 +3,7 @@ from turtle import Turtle
 
 class Ball(Turtle):
 
+    # Created function for turtle movements
     def __init__(self):
         super().__init__()
         self.color("white")
@@ -12,6 +13,7 @@ class Ball(Turtle):
         self.y_move = 10
         self.move_speed = 0.1
 
+    # Creating balll movements along diagonal x and y axis
     def move(self):
         new_x = self.xcor() + self.x_move
         new_y = self.ycor() + self.y_move
