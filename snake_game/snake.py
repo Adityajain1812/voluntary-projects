@@ -25,6 +25,7 @@ class Snake:
         new_segment.goto(position)
         self.segments.append(new_segment)
 
+    # Function to increase the length of snake as it eats the food 
     def extend(self):
         self.add_segment(self.segments[-1].position())
 
@@ -35,6 +36,7 @@ class Snake:
             self.segments[seg_num].goto(new_x, new_y)
         self.head.forward(MOVE_DISTANCE)
 
+    # Function to assign the keys for movement of snake 
     def up(self):
         if self.head.heading() != Down:
             self.head.setheading(Up)
