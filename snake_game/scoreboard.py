@@ -14,12 +14,14 @@ class Scoreboard(Turtle):
         
 # Updating the score as snake eats the food
     def update_scoreboard(self):
-        self.write(f"Score: {self.score}", align="center", font=("Arial", 24, "normal"))
+        self.write(f"Score: {self.score} High Score: {self.high_score}", align="center", font=("Arial", 24, "normal"))
 
 # Reseting snake position as snake hit the wall or collide with its body
-    def game_over(self):
-        self.goto(0, 0)
-        self.write("Game Over", align="center", font=("Arial", 24, "normal"))
+    def reset(self):
+        if self.score > self.high_score:
+            self.high_score = self.score
+        self.score = 0
+        self.update_scoreboard()
 
 # Increasing the score as the player scores a point 
     def increase_score(self):
